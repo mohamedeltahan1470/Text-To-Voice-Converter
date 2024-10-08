@@ -1,9 +1,10 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-.hero{
+
+.hero {
     width: 100%;
     min-height: 100vh;
     background: linear-gradient(45deg, #010758, #490d61);
@@ -12,59 +13,74 @@
     justify-content: center;
     flex-direction: column;
     color: #fff;
+    padding: 2rem;
 }
-.hero h1{
-    font-size: 45px;
+
+.hero h1 {
+    font-size: 2.5rem;
     font-weight: 500;
     margin-top: -50px;
-    margin-bottom: 50px;
+    margin-bottom: 2rem;
 }
-.hero h1 span{
+
+.hero h1 span {
     color: #ff2963;
 }
-textarea{
-    width: 600px;
+
+textarea {
+    width: 100%;
+    max-width: 600px;
     height: 250px;
     background: #503d84;
     color: #fff;
-    font-size: 15px;
+    font-size: 1rem;
     border: 0;
     outline: 0;
-    padding: 20px;
+    padding: 1rem;
     border-radius: 10px;
     resize: none;
-    margin-bottom: 30px;
+    margin-bottom: 2rem;
 }
-textarea::placeholder{
-     color: #ddd;
-     font-size: 16px;
+
+textarea::placeholder {
+    color: #ddd;
+    font-size: 1rem;
 }
-.row{
-    width: 600px;
+
+.row {
+    width: 100%;
+    max-width: 600px;
     display: flex;
     align-items: center;
-    gap: 20px;
+    gap: 1rem;
+    flex-wrap: wrap;
 }
-button{
+
+button {
     background: #ff2963;
     color: #fff;
-    font-size: 16px;
-    padding: 10px 30px ;
+    font-size: 1rem;
+    padding: 0.5rem 1.5rem;
     border-radius: 35px;
     border: 0;
     outline: 0;
     cursor: pointer;
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
 }
-button img{
-    width: 16px;
-    margin-right: 10px;
+
+button img {
+    width: 20px;
+    margin-right: 0.5rem;
 }
-select{
+
+select {
     flex: 1;
     color: #fff;
     background: #403d84;
     height: 50px;
-    padding: 0 20px ;
+    padding: 0 1rem;
     outline: 0;
     border: 0;
     border-radius: 35px;
@@ -74,4 +90,37 @@ select{
     background-size: 15px;
     background-position-x: calc(100% - 20px);
     background-position-y: 20px;
+}
+
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    textarea {
+        height: 150px;
+    }
+
+    .row {
+        flex-direction: column;
+    }
+
+    button {
+        width: 100%;
+    }
+
+    select {
+        width: 100%;
+        margin-bottom: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero h1 {
+        font-size: 1.5rem;
+    }
+
+    button {
+        padding: 0.5rem;
+    }
 }
